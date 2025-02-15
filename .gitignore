@@ -2,3 +2,14 @@ node_modules
 public
 
 package-lock.json
+
+# Файлы VS Code для тех, кто работает с несколькими инструментами
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Локальная история для Visual Studio code
+.history/
