@@ -10,8 +10,8 @@ const ExampleWorker: React.FunctionComponent = () => {
     const [error, setError] = useState(null);
 
     // Хуки для вычислений
-    const {factorial: factorialValue, getFactorial} = useFactorial();
-    const {result: fibonacciValue, run: getFibonacci} = useFibonacci();
+    const {factorial: factorialValue, isCalculation: factorialIsCalculation, getFactorial} = useFactorial();
+    const {result: fibonacciValue, isCalculation: fibonacciIsCalculation, run: getFibonacci} = useFibonacci();
 
     const onCalculate = (value: string) => {
         if (value === '' || isNaN(+value)) {
@@ -40,16 +40,23 @@ const ExampleWorker: React.FunctionComponent = () => {
                     <p>{error}</p>
                 </div>}
             </div>
-            <div className='exampleWorker-parent-result'>
-                <div>
-                    <p>Fibonacci:</p>
-                    <p>{fibonacciValue !== null ? fibonacciValue : '-'}</p>
-                </div>
-                <div>
-                    <p>Factorial:</p>
-                    <p>{factorialValue !== null ? factorialValue : '-'}</p>
-                </div>
-            </div>
+            {(factorialIsCalculation || fibonacciIsCalculation)
+                ? (
+                    <div className='exampleWorker-parent-loading'>
+                        <p>Идут вычисления...</p>
+                    </div>    
+                ) :(
+                    <div className='exampleWorker-parent-result'>
+                        <div>
+                            <p>Fibonacci:</p>
+                            <p>{fibonacciValue !== null ? fibonacciValue : '-'}</p>
+                        </div>
+                        <div>
+                            <p>Factorial:</p>
+                            <p>{factorialValue !== null ? factorialValue : '-'}</p>
+                        </div>
+                    </div>
+                )}
         </div>
     )
 }
