@@ -2,6 +2,10 @@ node_modules
 public
 
 package-lock.json
+yarn.lock
+
+# Служебные файлы MacOS
+.DS_*
 
 # Файлы VS Code для тех, кто работает с несколькими инструментами
 .vscode/*
@@ -13,3 +17,18 @@ package-lock.json
 
 # Локальная история для Visual Studio code
 .history/
+
+stats.html
+.vscode
+.idea
+msw-*.tgz
+.husky/_
+.env
+**/test-results
+/test/modules/node/node-esm-tests
+
+# Smoke test temporary files.
+/package.json.copy
+/examples
+/test/modules/node/node-esm-tests
+tsconfig.vitest-temp.json
