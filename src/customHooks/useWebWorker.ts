@@ -8,6 +8,7 @@ const workerHeandler = (fn: Function) => {
 
 export const useWebWorker = (fn: Function) => {
     const [result, setResult] = useState(null);
+    const [isCalculation, setIsCalculation] = useState(false);
 
     const workerRef =useRef(null);
 
@@ -22,6 +23,7 @@ export const useWebWorker = (fn: Function) => {
 
         worker.onmessage = (event) => {
             setResult(event.data);
+            setIsCalculation(false);
         };
 
         return () => {
@@ -31,6 +33,10 @@ export const useWebWorker = (fn: Function) => {
 
     return {
         result,
-        run: (value: number) => workerRef.current.postMessage(value),
+        isCalculation,
+        run: (value: number) => {
+            setIsCalculation(true);
+            workerRef.current.postMessage(value);
+        },
     }
 }
