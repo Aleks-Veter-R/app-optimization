@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SimpleForm from './simple-form/SimpleForm';
+import { useFactorial } from '../customHooks/useFactorial';
 
 import '../styles/ExampleWorker.scss';
 
@@ -7,13 +8,15 @@ const ExampleWorker: React.FunctionComponent = () => {
     const [data, setData] = useState('');
     const [error, setError] = useState(null);
     const [fibonacciValue, setFibonacci] = useState(null);
-    const [factorialValue, setFactorial] = useState(null);
+
+    // Хуки для вычислений
+    const {factorial: factorialValue, getFactorial} = useFactorial();
 
     const onCalculate = (value: string) => {
-        console.log(value);
-
         if (value === '' || isNaN(+value)) {
             setError('Введенное значение не является числом! Пожалуйста повторите ввод значения...');
+        } else {
+            getFactorial(+value);
         }
     }
 
