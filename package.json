@@ -6,13 +6,11 @@
   "author": "Aleks Veter",
   "main": "src/index.tsx",
   "scripts": {
-    "start-app": "npm run start:app",
     "start": "concurrently \"npm run start:app\" \"npm run start:server\"",
-    "start:app": "webpack serve --env mode=development port=9090",
+    "start:app": "webpack serve --env mode=development port=9090 --watch",
     "start:server": "npx msw init ./public --save",
     "build": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
-    "serve": "webpack serve",
     "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "tscheck": "tsc"
