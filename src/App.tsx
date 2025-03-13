@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router';
 
 import Root from './components/Root';
 import { Main } from './components/Main';
@@ -10,9 +11,16 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Root />}>
+                <Route path='/' element={<Root />}>
                     <Route index element={<Main />} />
-                    <Route path="second-page" element={<Second />} />
+                    <Route
+                        path='second-page'
+                        element={
+                            <Suspense fallback='Загрузка страницы...'>
+                                <Second />
+                            </Suspense>
+                        }
+                    />
                 </Route>
             </Routes>
         </BrowserRouter>
