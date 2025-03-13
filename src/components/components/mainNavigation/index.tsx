@@ -7,8 +7,11 @@ const MainNavigation = () => {
             <NavLink to="/">
                 Home
             </NavLink>
+            <NavLink to="/first-page">
+                First
+            </NavLink>
             <NavLink to="/second-page">
-                Trending Concerts
+                Second
             </NavLink>
         </div>
     );

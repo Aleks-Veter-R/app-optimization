@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 
 import Root from './components/Root';
 import { Main } from './components/Main';
+import { First } from './components/First';
 import { Second } from './components/Second';
 
 import './styles/App.scss';
@@ -13,6 +14,10 @@ const App = () => {
             <Routes>
                 <Route path='/' element={<Root />}>
                     <Route index element={<Main />} />
+                    <Route
+                        path='first-page'
+                        element={<First />}
+                    />
                     <Route
                         path='second-page'
                         element={
