@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './SimpleForm.scss';
+import './styles.scss';
 
 interface IProps {
     value: string;

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import SimpleForm from './simple-form/SimpleForm';
-import { useFactorial } from '../customHooks/useFactorial';
-import { useFibonacci } from '../customHooks/useFibonacci';
+import SimpleForm from '../components/simpleForm';
+import { useFactorial } from '../../customHooks/useFactorial';
+import { useFibonacci } from '../../customHooks/useFibonacci';
 
-import '../styles/ExampleWorker.scss';
+import './ExampleWorker.scss';
 
 const ExampleWorker: React.FunctionComponent = () => {
     const [data, setData] = useState('');

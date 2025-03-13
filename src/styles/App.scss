@@ -1,0 +1,24 @@
+@use './DefaultVars.scss' as defaultVars;
+@use './FontsStyles.scss';
+@use './ResetStyles.scss';
+
+body {
+    background-color: defaultVars.$coralThemThirdColor;
+}
+
+h1 {
+    text-align: center;
+    font-size: 23px;
+    line-height: 35px;
+    padding: 21px 17px;
+    color: defaultVars.$coralThemFourthColor;
+}
+
+p {
+    padding: 10px 17px;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: justify;
+    color: defaultVars.$coralThemFifthColor;
+    text-indent: 30px;
+}

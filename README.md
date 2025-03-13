@@ -9,3 +9,6 @@ start:server - запускает отдельно локальный моков
 
 build - сборка приложения в режиме production
 build:dev - сборка приложения в режиме development
+
+## Документация по навигации приложения API React Router (библиотечка)
+https://reactrouter.com/start/library/installation

@@ -1,0 +1,22 @@
+@use '../../../styles/DefaultVars.scss' as defaultVars;
+
+.app-navigation {
+    padding: 17px 13px;
+    background-color: defaultVars.$coralThemFirstColor;
+
+    & > a {
+        display: inline-block;
+        height: 21px;
+        margin: 0 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 21px;
+        font-weight: bold;
+        color: defaultVars.$coralThemSecondColor;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
