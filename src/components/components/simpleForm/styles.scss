@@ -1,3 +1,5 @@
+@use '../../../styles/DefaultVars.scss' as defaultVars;
+
 .simpleForm {
     display: flex;
     justify-content: space-between;
@@ -7,20 +9,21 @@
         margin: 0;
         padding: 2px 7px;
         outline: none;
-        border: 1px solid rgba(0, 0, 0, 0.3);
+        border: 1px solid defaultVars.$coralThemFifthColor;
         border-radius: 4px;
         box-sizing: border-box;
-        font: 13px / 21px 'Open Sans', sans-serif;
-        color: rgba(0, 0, 0, 0.7);
+        font-size: 12px;
+        line-height: 21px;
+        color: defaultVars.$coralThemFourthColor;
     }
 
     input {
         width: 230px;
-        background: rgba(249, 255, 112, 0.2);
+        background: defaultVars.$coralThemSixthColor;
     }
 
     button {
         width: 51px;
-        background: rgba(1, 151, 246, 0.2);
+        background: defaultVars.$coralThemSeventhColor;
     }
 }

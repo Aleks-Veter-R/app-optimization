@@ -1,17 +1,22 @@
+@use '../../styles/DefaultVars.scss' as defaultVars;
+
 .exampleWorker-parent-simpleForm {
     width: 300px;
     margin: 0 auto;
 
     .exampleWorker-wrapper-simpleForm {
         padding-bottom: 17px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid defaultVars.$coralThemFifthColor;
 
         .exampleWorker-error {
             p {
                 margin-bottom: 0;
+                padding: 15px 0 0;
                 text-align: center;
-                font: 15px / 21px "Open Sans", sans-serif;
-                color: red;
+                text-indent: 0;
+                font-size: 12px;
+                line-height: 17px;
+                color: defaultVars.$coralThemEighthColor;
             }
         }
     }
@@ -31,8 +36,10 @@
             p {
                 padding: 0;
                 margin: 0;
-                font: 17px / 21px "Open Sans", sans-serif;
-                color: rgba(0, 0, 0, 0.7);
+                font-size: 12px;
+                line-height: 17px;
+                color: defaultVars.$coralThemFifthColor;
+                text-indent: 0;
             }
         }
     }
@@ -40,8 +47,9 @@
     .exampleWorker-parent-loading {
         p {
             text-align: center;
-            font: 15px / 21px "Open Sans", sans-serif;
-            color: green;
+            font-size: 12px;
+            line-height: 17px;
+            color: defaultVars.$coralThemNinthColor;
         }
     }
 }

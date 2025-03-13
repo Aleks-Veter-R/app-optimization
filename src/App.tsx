@@ -1,19 +1,21 @@
-import { useEffect } from 'react';
-import { getTest } from '../rests/rests/fetchFns'
-import ExampleWorker from './components/ExampleWorker'
+import { BrowserRouter, Routes, Route } from "react-router";
+
+import Root from './components/Root';
+import { Main } from './components/Main';
+import { Second } from './components/Second';
+
+import './styles/App.scss';
 
 const App = () => {
-    useEffect(() => {
-        getTest('http://localhost:9090/test-rest');
-    }, []);
-
     return (
-        <div>
-            App
-            <div>
-                <ExampleWorker />
-            </div>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Root />}>
+                    <Route index element={<Main />} />
+                    <Route path="second-page" element={<Second />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
 
