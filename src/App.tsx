@@ -5,6 +5,7 @@ import Root from './components/Root';
 import { Main } from './components/Main';
 import { First } from './components/First';
 import { Second } from './components/Second';
+import { Third } from './components/Third';
 
 import './styles/App.scss';
 
@@ -25,6 +26,10 @@ const App = () => {
                                 <Second />
                             </Suspense>
                         }
+                    />
+                    <Route
+                        path='third-page'
+                        element={<Third />}
                     />
                 </Route>
             </Routes>
