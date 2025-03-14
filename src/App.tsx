@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router';
 
 import Root from './components/Root';
@@ -10,6 +10,13 @@ import { Third } from './components/Third';
 import './styles/App.scss';
 
 const App = () => {
+    // Изменение пропсов для страницы Third
+    let [value, setValue] = useState(1);
+
+    const setValuePage = (val: number) => {
+        setValue(val);
+    };
+
     return (
         <BrowserRouter>
             <Routes>
@@ -29,7 +36,12 @@ const App = () => {
                     />
                     <Route
                         path='third-page'
-                        element={<Third />}
+                        element={
+                            <Third
+                                value={value}
+                                setValue={setValuePage}
+                            />
+                        }
                     />
                 </Route>
             </Routes>
