@@ -20,6 +20,11 @@ const MainPage = () => {
                         Third - React Memo. Исключение перерисовки компонента, если свойства props остались неизменны
                     </Link>
                 </p>
+                <p>
+                    <Link to='/fourth-page'>
+                        Fourth - UseMemo(), UseCallback(). Хуки для мемоизации данных и функций
+                    </Link>
+                </p>
             </div>
         </div>
     );

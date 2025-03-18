@@ -6,6 +6,7 @@ import { Main } from './components/Main';
 import { First } from './components/First';
 import { Second } from './components/Second';
 import { Third } from './components/Third';
+import { Fourth } from './components/Fourth';
 
 import './styles/App.scss';
 
@@ -42,6 +43,10 @@ const App = () => {
                                 setValue={setValuePage}
                             />
                         }
+                    />
+                    <Route
+                        path='fourth-page'
+                        element={<Fourth />}
                     />
                 </Route>
             </Routes>
