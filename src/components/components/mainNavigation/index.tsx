@@ -16,6 +16,9 @@ const MainNavigation = () => {
             <NavLink to="/third-page">
                 Third
             </NavLink>
+            <NavLink to="/fourth-page">
+                Fourth
+            </NavLink>
         </div>
     );
 }

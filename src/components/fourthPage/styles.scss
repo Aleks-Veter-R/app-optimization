@@ -1,0 +1,46 @@
+$p: page;
+$r: rerender;
+$pc: page-child;
+
+// .#{$p}-#{$r} {
+//     padding: 17px;
+//     margin: 30px;
+//     border: solid 2px red;
+//     border-radius: 7px;
+
+    .#{$pc}-first-#{$r} {
+        padding: 10px;
+        margin: 10px;
+        border: solid 2px blue;
+        border-radius: 7px;
+
+        .#{$pc}-second-#{$r} {
+            padding: 10px;
+            margin: 10px;
+            border: solid 2px green;
+            border-radius: 7px;
+
+            .#{$pc}-third-#{$r} {
+                padding: 10px;
+                margin: 10px;
+                border: solid 2px orange;
+                border-radius: 7px;
+
+                .#{$pc}-fourth-#{$r} {
+                    padding: 10px;
+                    margin: 10px;
+                    border: solid 2px violet;
+                    border-radius: 7px;
+                }
+            }
+        }
+    }
+// }
+
+.#{$r}-control-block {
+    padding: 0 10px;
+
+    :first-child {
+        margin-right: 10px;
+    }
+}
